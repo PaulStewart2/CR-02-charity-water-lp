@@ -107,55 +107,114 @@
     <meta charset="UTF-8">
     <title>Charity: Water</title>
     <style>
-      .hero-img {
-        background-image: url('img/hero.png');
-        background-size: contain;
-        background-position: center;
-        height: 500px;
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .site-header {
+        padding: 20px 40px;
+        background-color: white;
+      }
+
+      .site-header img {
+        height: 50px;
+      }
+
+      .hero-section {
+        display: flex;
         width: 100vw;
-        position: relative;
+        min-height: 500px;
       }
 
-      .main-section {
-        padding: 40px;
-        text-align: center;
-        background-color: #fdd100;
+      .hero-image {
+        flex: 1;
+        background-image: url('img/hero.png'); /* Update this if your file has a different name */
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #f5f5f5;
       }
 
-      .cta h1 {
+      .story-message {
+        flex: 1;
+        padding: 60px;
+        background-color: white;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      .story-message h1,
+      .story-message h2 {
         font-size: 2em;
-        margin-bottom: 10px;
-      }
-
-      .cta p {
-        font-size: 1.1em;
         margin-bottom: 20px;
       }
 
-      .cta button {
-        background-color: white;
+      .story-message p {
+        font-size: 1.1em;
+        margin-bottom: 30px;
+        line-height: 1.5;
+      }
+
+      .story-message button {
+        background-color: black;
+        color: white;
         border: none;
         padding: 12px 24px;
         font-size: 1em;
         border-radius: 6px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         cursor: pointer;
+      }
+
+      @media (max-width: 768px) {
+        .hero-section {
+          flex-direction: column;
+        }
+
+        .story-message {
+          align-items: center;
+          text-align: center;
+          padding: 40px 20px;
+        }
+
+        .hero-image {
+          height: 300px;
+        }
+
+        .site-header {
+          text-align: center;
+        }
       }
     </style>
   </head>
 
   <body>
-    <div class="hero-img"></div>
 
-    <div class="main-section">
-      <div class="cta">
+    <header class="site-header">
+      <img src="img/cw_logo.png" alt="Charity: Water logo">
+    </header>
+
+    <div class="hero-section">
+      <div class="hero-image"></div>
+
+      <div class="story-message">
         <h1>One Click. One Family. Clean Water.</h1>
-        <p>Make a real impact. Your donation brings clean water to families in seconds.</p>
-        <button>Give Clean Water!</button>
+        <p>Grace and her children used to walk miles for water. Today, thanks to one act of generosity, clean water flows just steps from their home. One click changed everything — and it can for another family too.</p>
+        <button>Give Clean Water</button>
       </div>
     </div>
+
   </body>
 </html>
+
 
     
   <div class="image-grid">
